@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<<div class="body" align="center">
+<form action="{{ url_for('main') }}" method="POST",id = "newsform">
+<h2>News Article:</h2><br>
+		<textarea rows="10" cols="100" name="textarea" placeholder = "Enter text here..."></textarea>
+<br><br>
+<input type="submit", value = "Predict">
+</form>
+<br>
+<div class="result" align="center">
+{% if result: %}
+        <br> <h3>The news snippet belongs to:</h3>
+           <p style="font-size:50px;color:green" >{{ result }}</p>
+    {% endif %}
+</div>
+
+<p><b>Paste any news article snipppet in the above text box and click on Submit to find to which category it belongs</b></p>
+
+<p><b>Note:</b> The form attribute is not supported in IE.</p>
+</div>
+</body>
+</html>
